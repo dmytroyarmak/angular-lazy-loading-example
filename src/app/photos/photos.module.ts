@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ImageCropperComponent, CropperSettings, Bounds } from 'ng2-img-cropper';
 
 import { PhotosRoutingModule } from './photos-routing.module';
 import { PhotosComponent } from './components/photos/photos.component';
@@ -10,7 +11,8 @@ import { PhotosComponent } from './components/photos/photos.component';
     PhotosRoutingModule
   ],
   declarations: [
-    PhotosComponent
+    PhotosComponent,
+    ImageCropperComponent
   ],
   exports: [
     PhotosComponent

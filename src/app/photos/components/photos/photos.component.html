@@ -1,3 +1,15 @@
-<p>
-  photos works!
-</p>
+  <div>
+     <img-cropper
+        [image]="data1"
+        [settings]="cropperSettings1"
+        (onCrop)="cropped($event)"
+      ></img-cropper>
+
+     <span *ngIf="data1.image" >
+        <img
+          [src]="data1.image"
+          [width]="croppedWidth"
+          [height]="croppedHeight"
+        />
+    </span>
+  </div>
