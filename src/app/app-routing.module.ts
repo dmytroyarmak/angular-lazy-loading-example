@@ -1,10 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { DashboardComponent } from './dashboard/components/dashboard/dashboard.component';
-import { UsersComponent } from './users/components/users/users.component';
-import { PhotosComponent } from './photos/components/photos/photos.component';
-
 const routes: Routes = [
   {
     path: '',
@@ -13,15 +8,15 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    loadChildren: 'app/dashboard/dashboard.module#DashboardModule'
   },
   {
     path: 'users',
-    component: UsersComponent
+    loadChildren: 'app/users/users.module#UsersModule'
   },
   {
     path: 'photos',
-    component: PhotosComponent
+    loadChildren: 'app/photos/photos.module#PhotosModule'
   }
 ];
 
